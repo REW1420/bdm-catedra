@@ -8,4 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class Pedido extends Model
 {
     use HasFactory;
+
+    protected $table = 'pedido';
+    protected $fillable = [
+        'id_pedido',
+        'fecha',
+        'total_a_pagar',
+        'pagado',
+        'entregado',
+        'latitud',
+        'longitud',
+        'id_usuario'
+    ];
 }
