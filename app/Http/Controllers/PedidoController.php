@@ -16,7 +16,7 @@ class PedidoController extends Controller
         return $pedido;
 
         if ($pedido->isEmpty()) {
-            return response()->json(['error' => 'No se encontro su pedido.'], 404);
+            return response()->json(['error' => 'No se encontraron pedidos.'], 404);
         } else {
             return response()->json([$pedido, 200]);
         } //

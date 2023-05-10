@@ -12,8 +12,18 @@ class ClienteController extends Controller
      */
     public function index()
     {
+
+
+
         $cliente = Cliente::all();
-        return $cliente;
+
+
+        if ($cliente->isEmpty()) {
+            return response()->json(['error' => 'No se encontraron clientes.'], 404);
+        } else {
+            return response()->json([$cliente, 200]);
+
+        }
     }
 
     /**
