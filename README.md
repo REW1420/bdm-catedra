@@ -12,7 +12,8 @@
 <ul>
   <li><a href="https://trello.com/b/3gOhsGWT/bdm">Trello</a></li>
  <li><a href="https://youtu.be/JdV4kdo7eYs">Video defensa</a></li>
-  <li><a href="https://drive.google.com/file/d/1pQKFMpbpcIkT7UUYDfsmiM4NDo-2ZTDy/view?usp=sharing">Manual tecnico</a></li>
+  <li><a href="https://drive.google.com/file/d/1HPh6JVx7_vgJ_7p26zQ_8PIqJailoPct/view?usp=sharing">Manual tecnico</a></li>
+    <li><a href="https://drive.google.com/file/d/1FlRYQyTYi-VXlYOEaZwKoMxpdpiIKbWm/view?usp=sharing">Script</a></li>
 
  
 </ul>
