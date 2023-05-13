@@ -81,7 +81,7 @@ class PedidoController extends Controller
             ], 404);
         } else if ($pedido) {
             $pedido = new Pedido();
-            $pedido->id_pedido = $request->id_pedido;
+         
             $pedido->fecha = $request->fecha;
             $pedido->total_a_pagar = $request->total_a_pagar;
             $pedido->pagado = $request->pagado;
@@ -89,7 +89,7 @@ class PedidoController extends Controller
             $pedido->latitud = $request->latitud;
             $pedido->longitud = $request->longitud;
             $pedido->id_usuario = $request->id_usuario;
-            $pedido->save();
+            $pedido->update();
 
 
             return response()->json([

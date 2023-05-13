@@ -87,7 +87,7 @@ class ClienteController extends Controller
             $cliente->correo = $request->correo;
             $cliente->contrasena = $request->contrasena;
             $cliente->numero_de_telefono = $request->numero_de_telefono;
-            $cliente->save();
+            $cliente->update();
 
             return response()->json([
                 "mensaje" => "cliente actualizado",

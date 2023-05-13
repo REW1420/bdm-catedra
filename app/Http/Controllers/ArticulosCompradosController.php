@@ -75,22 +75,28 @@ class ArticulosCompradosController extends Controller
     public function update(Request $request, $id_articulo)
     {
         $articulo = Articulos_comprados::where('id_articulo', $id_articulo)->first();
-    
+
         if (!$articulo) {
             return response()->json([
                 "mensaje" => "Articulo con ID $id_articulo no existe"
             ], 404);
+        } else if ($articulo) {
+
+            $articulo = new Articulos_comprados();
+            $articulo->productos = $request->productos;
+            $articulo->update();
+
+            return response()->json([
+                "mensaje" => "Articulo actualizado",
+                "articulo" => $articulo
+            ], 200);
         }
-    
-        $articulo->productos = $request->input('productos');
-        $articulo->save();
-    
-        return response()->json([
-            "mensaje" => "Articulo actualizado",
-            "articulo" => $articulo
-        ], 200);
+
+
+
+
     }
-    
+
 
     /**
      * Remove the specified resource from storage.
